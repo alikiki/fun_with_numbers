@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 outputElement.textContent = "";
                 return;
             } else if (!(/^[0-9]+$/.test(inputValue))) {
-                streamingTimeout = streamingEffect("I am a large language model that cannot non-numeric characters.".split(/(\s|-)/), outputElement);
+                streamingTimeout = streamingEffect("I am a large language model that cannot understand non-numeric characters.".split(/(\s|-)/), outputElement);
                 return;
             } else if (inputValue.length > 33) {
-                streamingTimeout = streamingEffect("I am a large language model that can't fathom numbers greater than 1e33.".split(/(\s|-)/), outputElement);
+                streamingTimeout = streamingEffect("I am a large language model that cannot fathom numbers greater than 1e33.".split(/(\s|-)/), outputElement);
                 return;
             } else {
                 const parsedValue = parse(inputValue.replace(/^0+/, "")).split(/(\s|-)/);
